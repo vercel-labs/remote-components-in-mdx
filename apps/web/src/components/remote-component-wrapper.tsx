@@ -5,23 +5,7 @@ function replaceHost(url: string): string {
   if (!remoteHost) {
     return url;
   }
-
-  try {
-    const urlObj = new URL(url);
-    let hostToUse = remoteHost;
-    
-    try {
-      const envUrl = new URL(remoteHost);
-      hostToUse = envUrl.host;
-    } catch {
-      hostToUse = remoteHost;
-    }
-    
-    urlObj.host = hostToUse;
-    return urlObj.toString();
-  } catch {
-    return url;
-  }
+  return url.replace("http://localhost:4000", remoteHost);
 }
 
 export function RemoteComponentWrapper({
