@@ -1,7 +1,7 @@
-import { RemoteComponent } from "remote-components/next/host";
+import { RemoteComponentWrapper } from "@/components/remote-component-wrapper";
 
 export default function RemoteCounter() {
   return (
-    <RemoteComponent src="http://localhost:4000/remote-components/counter?name=server" />
+    <RemoteComponentWrapper src="http://localhost:4000/remote-components/counter?name=server" />
   );
 }

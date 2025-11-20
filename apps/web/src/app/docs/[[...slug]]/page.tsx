@@ -3,7 +3,7 @@ import { getPostBySlug, getAllPostSlugs } from '@/lib/mdx';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
-import { RemoteComponent } from 'remote-components/next/host';
+import { RemoteComponentWrapper } from '@/components/remote-component-wrapper';
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -36,7 +36,7 @@ export default async function DocsPage({
             },
           }}
           components={{
-            RemoteComponent,
+            RemoteComponent: RemoteComponentWrapper,
           }}
         />
       </article>
