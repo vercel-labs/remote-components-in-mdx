@@ -20,6 +20,15 @@ export default function ButtonDemo() {
           <Button variant="destructive" onClick={() => setClickCount((c) => c + 1)}>
             Destructive
           </Button>
+          <Button variant="outline" onClick={() => setClickCount((c) => c + 1)}>
+            Outline
+            </Button>
+          <Button variant="ghost" onClick={() => setClickCount((c) => c + 1)}>
+            Ghost
+          </Button>
+          <Button variant="link" onClick={() => setClickCount((c) => c + 1)}>
+            Link
+          </Button>
         </div>
       </div>
 
