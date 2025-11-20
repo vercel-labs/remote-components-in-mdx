@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/mdx';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 import { RemoteComponent } from 'remote-components/next/host';
 
 export async function generateStaticParams() {
@@ -31,7 +32,7 @@ export default async function DocsPage({
           options={{
             parseFrontmatter: true,
             mdxOptions: {
-              remarkPlugins: [remarkGfm],
+              remarkPlugins: [remarkGfm, remarkBreaks],
             },
           }}
           components={{
