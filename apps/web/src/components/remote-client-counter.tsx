@@ -1,9 +1,11 @@
 "use client";
 
-import { RemoteComponentWrapperClient } from "@/components/remote-component-wrapper-client";
+import { RemoteComponentWrapper } from "./remote-component-wrapper";
+
+
 
 export default function RemoteClientCounter() {
   return (
-    <RemoteComponentWrapperClient src="http://localhost:4000/remote-components/counter?name=client" />
+    <RemoteComponentWrapper src="http://localhost:4000/remote-components/counter?name=client" />
   );
 }
