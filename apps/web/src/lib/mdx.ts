@@ -1,15 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 
-const contentDir = path.join(process.cwd(), 'content/docs');
+const contentDir = path.join(process.cwd(), 'content');
 
 export function getPostBySlug(slug: string[]) {
   const realSlug = slug.join('/');
-  // Check for .mdx file
   let fullPath = path.join(contentDir, `${realSlug}.mdx`);
   
   if (!fs.existsSync(fullPath)) {
-    // Check for index.mdx in a folder (or root index)
     fullPath = path.join(contentDir, realSlug, 'index.mdx');
   }
 

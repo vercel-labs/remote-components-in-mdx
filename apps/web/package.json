@@ -3,16 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 3000",
-    "build": "next build --turbopack",
+    "sync-docs": "node scripts/sync-docs.js",
+    "dev": "pnpm sync-docs && next dev --turbopack --port 3000",
+    "build": "pnpm sync-docs && next build --turbopack",
     "start": "next start --port 3000",
     "lint": "eslint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/mdx": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.0.3",
     "canvas-confetti": "^1.9.3",
     "next": "catalog:",
+    "next-mdx-remote": "^5.0.0",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "remark-gfm": "^4.0.1",
     "remote-components": "catalog:"
   },
   "devDependencies": {
