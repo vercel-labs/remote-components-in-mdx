@@ -17,5 +17,14 @@
   "packageManager": "pnpm@10.14.0",
   "workspaces": [
     "apps/*"
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "next": "15.5.7",
+      "react": "19.1.2",
+      "react-dom": "19.1.2",
+      "react-server-dom-turbopack": "19.1.2",
+      "react-server-dom-webpack": "19.1.2"
+    }
+  }
 }
