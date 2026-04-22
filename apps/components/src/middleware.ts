@@ -1,7 +1,6 @@
-import {
-  withRemoteComponents,
-  config,
-} from "remote-components/next/middleware";
+import { withRemoteComponents } from "remote-components/next/middleware";
 
-const middleware = withRemoteComponents();
-export { config, middleware };
+export const middleware = withRemoteComponents();
+export const config = {
+  matcher: "/:path*",
+};
