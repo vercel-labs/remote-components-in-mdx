@@ -2,11 +2,11 @@ packages:
   - apps/*
 
 catalog:
-  eslint-config-next: ^15.5.7
-  next: ^15.5.7
+  eslint-config-next: ^15.5.15
+  next: ^15.5.15
   react: 19.1.2
   react-dom: 19.1.2
-  remote-components: 0.0.13
+  remote-components: 0.0.51
 
 onlyBuiltDependencies:
   - "@tailwindcss/oxide"
