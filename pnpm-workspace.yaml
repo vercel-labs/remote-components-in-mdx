@@ -2,8 +2,8 @@ packages:
   - apps/*
 
 catalog:
-  eslint-config-next: ^15.5.15
-  next: ^15.5.15
+  eslint-config-next: ^15.5.28
+  next: ^15.5.28
   react: 19.1.2
   react-dom: 19.1.2
   remote-components: 0.0.51
